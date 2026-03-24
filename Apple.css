@@ -1,0 +1,81 @@
+:root {
+    --apple-bg: #F5F5F7;
+    --apple-text: #1D1D1F;
+    --apple-blue: #0071E3;
+    --glass: rgba(255, 255, 255, 0.7);
+    --brasil-green: #2E7D32;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+body { background-color: white; color: var(--apple-text); overflow-x: hidden; }
+
+/* Navbar Glassmorphism */
+.glass-nav {
+    position: fixed; top: 0; width: 100%; height: 44px;
+    background: var(--glass); backdrop-filter: saturate(180%) blur(20px);
+    z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.nav-content {
+    max-width: 1000px; margin: 0 auto; height: 100%;
+    display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
+}
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--apple-text); font-size: 12px; opacity: 0.8; transition: 0.3s; }
+.nav-links a:hover { opacity: 1; }
+
+/* Hero Section */
+.hero {
+    height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; background: #000; color: white;
+}
+.brasil-detail {
+    font-size: 14px; color: #FBC02D; font-weight: 600; margin-bottom: 10px;
+    border: 1px solid var(--brasil-green); padding: 4px 12px; border-radius: 20px;
+}
+.hero h1 { font-size: 56px; font-weight: 600; letter-spacing: -2px; }
+.hero p { font-size: 24px; margin: 10px 0 30px; }
+
+/* Botões Apple */
+.btn-apple {
+    background: var(--apple-blue); color: white; padding: 12px 25px;
+    border-radius: 30px; border: none; font-size: 17px; cursor: pointer; transition: 0.3s;
+}
+.btn-apple.dark { background: #1D1D1F; }
+.btn-apple:hover { opacity: 0.9; transform: scale(1.02); }
+
+/* Grid de Produtos */
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; background: var(--apple-bg); }
+.product-card {
+    background: white; border-radius: 30px; padding: 50px; text-align: center;
+    display: flex; flex-direction: column; align-items: center; overflow: hidden;
+}
+.product-card.large { grid-column: span 2; height: 600px; }
+.product-card h2 { font-size: 40px; margin-bottom: 10px; }
+.product-card img { width: 80%; margin-top: 40px; transition: 0.5s ease; }
+.product-card:hover img { transform: scale(1.05); }
+
+/* Seção de Carreiras */
+.careers-section { padding: 100px 0; text-align: center; background: white; }
+.glass {
+    background: rgba(245, 245, 247, 0.8); backdrop-filter: blur(10px);
+    border-radius: 30px; padding: 40px; max-width: 600px; margin: 40px auto;
+}
+.btn-pill {
+    padding: 8px 20px; border-radius: 20px; border: 1px solid #ddd;
+    background: white; margin: 5px; cursor: pointer;
+}
+.btn-pill.active { background: var(--apple-text); color: white; }
+
+/* Developer Section */
+.gradient-text {
+  background: linear-gradient(90deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+.code-preview { margin-top: 40px; padding: 20px; border-radius: 15px; font-family: monospace; color: #48ff00; }
+
+.apple-footer { padding: 50px 0; font-size: 12px; color: #666; border-top: 1px solid #ddd; }
